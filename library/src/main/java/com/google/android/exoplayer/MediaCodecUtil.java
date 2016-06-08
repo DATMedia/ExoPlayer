@@ -171,7 +171,8 @@ public final class MediaCodecUtil {
    */
   private static boolean isCodecUsableDecoder(MediaCodecInfo info, String name,
       boolean secureDecodersExplicit) {
-    if (info.isEncoder() || (!secureDecodersExplicit && name.endsWith(".secure"))) {
+    //OMX.amlogic are hardware decoders with x8 cup(amlogic CPU). so x7(Rockchip CPU) will still use hardware decodes(start with OMX.rv.) as thery are using different cpu
+    if (info.isEncoder() || (!secureDecodersExplicit && name.endsWith(".secure")) || name.startsWith("OMX.amlogic")) {
       return false;
     }
 

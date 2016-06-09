@@ -7,6 +7,11 @@ supported by Android’s MediaPlayer API, including DASH and SmoothStreaming
 adaptive playbacks. Unlike the MediaPlayer API, ExoPlayer is easy to customize
 and extend, and can be updated through Play Store application updates.
 
+
+## Information on this Fork ##
+
+This is a fork of the ExoPlayer code, used specifically for DAT Media. We have put a change in [MediaCodecUtil.java](/library/src/main/java/com/google/android/exoplayer/MediaCodecUtil.java) so it will not use the hardware encoder on Minx X8 machines.
+
 ## News ##
 
 Read news, hints and tips on the [news][] page.
